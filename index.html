@@ -6,12 +6,21 @@
     <title>Donet BD</title>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.24/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      .popup{
+        position: absolute;
+        top:25%;
+        left :30%;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        position: fixed;
+      }
+    </style>
 
 </head>
-<body class="">
-    <header class="sticky top-0 bg-white/70  z-50 ">
+<body class="relative">
+    <header class=" sticky top-0 bg-white/70  z-50 ">
            <nav class="grid gap-32 grid-cols-3 justify-center items-center py-4 px-32 bg-slate-100">
-            <button class="btn w-20 bg-lime-400 font-bold text-lg">Blog</button>
+            <button id="blog-btn" class="btn w-20 bg-lime-400 font-bold text-lg">Blog</button>
             <div class="flex gap-2">
               <img class="w-8 h-8" src="images/logo.png" alt="">
               <h4 class="font-bold text-xl">Donate Bangladesh</h4>
@@ -27,7 +36,7 @@
             <button id="btn-history" class="btn w-28  font-bold text-lg border">History</button>
           </div>
     </header>
-    <main id="donate-container" class="px-28 py-8 grid gap-4">
+    <main id="donate-container" class=" px-28 py-8 grid gap-4">
          <!-- Card-1 -->
          <div class="flex  w-6xl border rounded-lg">
           <div class="hero-content flex-col lg:flex-row">
@@ -95,6 +104,47 @@
     <div id="history-container" class="p-20 hidden">
       
     </div> 
+   <div id="popup" class="popup hidden ">
+    <div class="bg-white shadow-xl w-[450px] mx-auto  p-10 rounded-xl text-center grid gap-4 justify-center items-center absolute popup2">
+      <h3 class="text-2xl font-bold">Congrates!</h3>
+      <img class="mx-auto" src="images/coin.png" alt="">
+      <p class="font-semibold text-gray-600">You Have Donated for Humankind</p>
+      <h4 class="text-xl font-bold">Successfully</h4>
+      <button id="popup-btn" class="bg-slate-100  rounded-md font-semibold py-2">close conformation</button>
+   </div>
+   </div>
+   <!-- blog section -->
+    <section id="blog-section" class="p-20 hidden">
+      <h3 class="text-2xl font-bold">Important FAQ</h3> <br>
+      <div class="collapse collapse-arrow bg-base-200 ">
+        <input type="radio" name="my-accordion-2" checked="checked" />
+        <div class="collapse-title text-xl font-medium">1. What is the Document Object Model (DOM)?</div>
+        <div class="collapse-content">
+          <p>The Document Object Model (DOM) is a programming interface for web documents. It represents the structure of an HTML or XML document as a tree-like hierarchy, where each element is a node. The DOM allows JavaScript to access, modify, and manipulate the content, structure, and styles of a webpage dynamically.</p>
+        </div>
+      </div>
+      <div class="collapse collapse-arrow bg-base-200">
+        <input type="radio" name="my-accordion-2" />
+        <div class="collapse-title text-xl font-medium">2. How do you select an element from the DOM?</div>
+        <div class="collapse-content">
+          <p>To select an element from the DOM, i can use different methods based on my needs. If i want to select an element by its ID,  getElementById(), which returns a single element. To select elements by class name, use getElementsByClassName(), which returns a collection of matching elements. If I need to select elements by tag name, I can use getElementsByTagName(), which also returns multiple elements. For more flexibility, CSS selectors can be used with querySelector() to get the first matching element or querySelectorAll() to get all matching elements. Among these, querySelector() and querySelectorAll() are the most powerful and widely used methods. </p>
+        </div>
+      </div>
+      <div class="collapse collapse-arrow bg-base-200">
+        <input type="radio" name="my-accordion-2" />
+        <div class="collapse-title text-xl font-medium">3. What is event delegation in the context of the DOM, and why is it useful?</div>
+        <div class="collapse-content">
+          <p>Event delegation is a technique in JavaScript where a parent element handles events for its child elements, even if they are added dynamically. Instead of attaching event listeners to multiple child elements, you attach a single listener to their common parent and use event bubbling to detect which child triggered the event.</p>
+        </div>
+        <div class="collapse collapse-arrow bg-base-200">
+            <input type="radio" name="my-accordion-2" />
+            <div class="collapse-title text-xl font-medium">4. How do you manipulate an element's attributes and styles using the DOM?</div>
+            <div class="collapse-content">
+              <p>In the DOM, you can manipulate an element’s attributes and styles using JavaScript. If you want to change an attribute of an element, you can use setAttribute() to modify it, getAttribute() to retrieve its value, and removeAttribute() to delete it. For example, if you have an image and want to change its source dynamically, you can use setAttribute("src", "new-image.jpg"). <br>
+                Similarly, you can modify an element’s styles using the style property. For example, element.style.color = "blue" changes the text color to blue. You can also apply multiple styles at once using style.cssText. However, instead of directly modifying styles, a better approach is to use classList, which allows you to add, remove, or toggle CSS classes efficiently. For example, element.classList.add("new-class") applies a predefined CSS style, making your code cleaner and easier to manage.</p>
+            </div>
+      </div>
+    </section>
     <footer>
 
     </footer>

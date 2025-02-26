@@ -21,6 +21,8 @@ document.getElementById('btn-noakhali').addEventListener('click', function(event
        `
        document.getElementById('history-container').appendChild(div)
     //  history part end
+       const popup = document.getElementById('popup');
+       popup.classList.remove('hidden')
     }
     else{
         alert('Please try again!')
@@ -51,6 +53,8 @@ document.getElementById('btn-feni').addEventListener('click', function(event){
         `
         document.getElementById('history-container').appendChild(div)
      //  history part end
+     const popup = document.getElementById('popup');
+     popup.classList.remove('hidden')
     }
     else{
         alert('Please try again!')
@@ -79,6 +83,9 @@ document.getElementById('quota-btn').addEventListener('click', function(event){
             `
             document.getElementById('history-container').appendChild(div)
          //  history part end
+         const popup = document.getElementById('popup');
+         popup.classList.remove('hidden')
+         
     }
     else{
         alert('Please try again!')

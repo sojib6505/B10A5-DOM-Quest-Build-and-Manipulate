@@ -7,6 +7,8 @@ document.getElementById('btn-donation').addEventListener('click',function(){
     donate.classList.remove('hidden')
     const history = document.getElementById('history-container');
     history.classList.add('hidden')
+    const blogPart = document.getElementById('blog-section');
+    blogPart.classList.add('hidden');
     
 })
 
@@ -19,5 +21,23 @@ document.getElementById('btn-history').addEventListener('click',function(){
     history.classList.remove('hidden')
     const donate = document.getElementById('donate-container');
     donate.classList.add('hidden')
-   
+    const blogPart = document.getElementById('blog-section');
+    blogPart.classList.add('hidden');
 })
+document.getElementById('popup-btn').addEventListener('click',function(){
+   const popup = document.getElementById('popup');
+   popup.classList.add('hidden')
+   
+ })
+//  blog Section
+ document.getElementById('blog-btn').addEventListener('click',function(){
+    
+    const blogPart = document.getElementById('blog-section');
+    blogPart.classList.remove('hidden');
+ 
+    const donate = document.getElementById('donate-container');
+    donate.classList.add('hidden')
+    const history = document.getElementById('history-container');
+    history.classList.add('hidden')
+    
+ })
