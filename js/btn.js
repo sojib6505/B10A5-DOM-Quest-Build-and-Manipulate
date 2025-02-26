@@ -3,6 +3,11 @@ document.getElementById('btn-donation').addEventListener('click',function(){
     btnDonate.classList.add('bg-lime-400');
     const btnHistory = getButtonById('btn-history');
     btnHistory.classList.remove('bg-lime-400');
+    const donate = document.getElementById('donate-container');
+    donate.classList.remove('hidden')
+    const history = document.getElementById('history-container');
+    history.classList.add('hidden')
+    
 })
 
 document.getElementById('btn-history').addEventListener('click',function(){
@@ -10,5 +15,9 @@ document.getElementById('btn-history').addEventListener('click',function(){
     btnHistory.classList.add('bg-lime-400');
     const btnDonate = getButtonById('btn-donation');
     btnDonate.classList.remove('bg-lime-400');
+    const history = document.getElementById('history-container');
+    history.classList.remove('hidden')
+    const donate = document.getElementById('donate-container');
+    donate.classList.add('hidden')
    
 })
