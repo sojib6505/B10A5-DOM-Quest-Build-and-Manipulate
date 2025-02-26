@@ -15,8 +15,8 @@ document.getElementById('btn-noakhali').addEventListener('click', function(event
        let currentTime = new Date().toLocaleString();
        div.innerHTML = `
        <div class="w-5xl  rounded-lg p-5  border mt-2 text-center">
-       <h5 class="font-bold text-2xl">${donateAmount} Taka is Donated for famine-2024 at Feni, Bangladesh</h5>
-       <p class="text-xl">Donation Time: ${currentTime} </p>
+       <h5 class="font-bold text-xs lg:text-2xl">${donateAmount} Taka is Donated for famine-2024 at Feni, Bangladesh</h5>
+       <p class="text-xs lg:text-xl">Donation Time: ${currentTime} </p>
        </div>
        `
        document.getElementById('history-container').appendChild(div)
@@ -47,8 +47,8 @@ document.getElementById('btn-feni').addEventListener('click', function(event){
         let currentTime = new Date().toLocaleString();
         div.innerHTML = `
         <div class="w-5xl  rounded-lg p-5  border mt-2 text-center">
-        <h5 class="font-bold text-2xl">${donateAmount} Taka is Donated for Flood Relief in Feni,Bangladesh</h5>
-        <p class="text-xl">Donation Time: ${currentTime} </p>
+        <h5 class="font-bold text-xs lg:text-2xl">${donateAmount} Taka is Donated for Flood Relief in Feni,Bangladesh</h5>
+        <p class="text-xs lg:text-xl">Donation Time: ${currentTime} </p>
         </div>
         `
         document.getElementById('history-container').appendChild(div)
@@ -77,8 +77,8 @@ document.getElementById('quota-btn').addEventListener('click', function(event){
             let currentTime = new Date().toLocaleString();
             div.innerHTML = `
             <div class="w-5xl  rounded-lg p-5  border mt-2 text-center">
-            <h5 class="font-bold text-2xl">${donateAmount} Taka is Donated for Aid for Injured in the Quota Movement, Bangladesh</h5>
-            <p class="text-xl">Donation Time: ${currentTime} </p>
+            <h5 class="font-bold text-xs lg:text-2xl">${donateAmount} Taka is Donated for Aid for Injured in the Quota Movement, Bangladesh</h5>
+            <p class="text-xs lg:text-xl">Donation Time: ${currentTime} </p>
             </div>
             `
             document.getElementById('history-container').appendChild(div)

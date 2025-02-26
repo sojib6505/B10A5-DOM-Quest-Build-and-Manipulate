@@ -14,31 +14,37 @@
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
         position: fixed;
       }
-    </style>
 
+      @media (max-width: 767px){
+        .popup{
+          top:18%;
+          left:10%
+        }
+      }
+    </style>
 </head>
-<body class="relative">
+<body class="relative mb-20">
     <header class=" sticky top-0 bg-white/70  z-50 ">
-           <nav class="grid gap-32 grid-cols-3 justify-center items-center py-4 px-32 bg-slate-100">
-            <button id="blog-btn" class="btn w-20 bg-lime-400 font-bold text-lg">Blog</button>
+           <nav class="flex gap-12 lg:grid  lg:gap-32 grid-cols-3 justify-center items-center py-2 lg:py-4 px-32 bg-slate-100">
+            <button id="blog-btn" class="btn w-16 lg:w-20 bg-lime-400 font-bold  lg:text-lg">Blog</button>
             <div class="flex gap-2">
               <img class="w-8 h-8" src="images/logo.png" alt="">
-              <h4 class="font-bold text-xl">Donate Bangladesh</h4>
+              <h4 class="font-bold text-sm lg:text-xl">Donate Bangladesh</h4>
             </div>
-            <div class="flex gap-1 ml-32">
-              <img class="w-6 h-6" src="images/coin.png" alt="">
-              <p id="main-Amount" class="font-semibold">5500</p>
+            <div class="flex gap-1  lg:ml-32  items-center">
+              <img class="w-4 h-4 lg:w-6 lg:h-6" src="images/coin.png" alt="">
+              <p id="main-Amount" class=" font-semibold">5500</p>
               <p class="font-semibold">BDT</p>
             </div>
            </nav>
-          <div class="flex justify-center mt-10 gap-4 py-4">
-            <button id="btn-donation" class="btn w-28 bg-lime-400 font-bold text-lg">Donation</button>
-            <button id="btn-history" class="btn w-28  font-bold text-lg border">History</button>
+          <div class="flex justify-center mt-3 lg:mt-10 gap-4 py-1 lg:py-4">
+            <button id="btn-donation" class="btn w-20 lg:w-28 bg-lime-400 font-bold text-sm lg:text-lg">Donation</button>
+            <button id="btn-history" class="btn w-20 lg:w-28  font-bold text-sm lg:text-lg border">History</button>
           </div>
     </header>
-    <main id="donate-container" class=" px-28 py-8 grid gap-4">
+    <main id="donate-container" class="px-1 lg:px-28 py-8 grid gap-4">
          <!-- Card-1 -->
-         <div class="flex  w-6xl border rounded-lg">
+         <div class="flex  lg:w-6xl border rounded-lg">
           <div class="hero-content flex-col lg:flex-row">
             <img
               src="images/noakhali.png"
@@ -101,11 +107,11 @@
           </div>
         </div>
     </main>
-    <div id="history-container" class="p-20 hidden">
+    <div id="history-container" class="p-2 lg:p-20 hidden">
       
     </div> 
    <div id="popup" class="popup hidden ">
-    <div class="bg-white shadow-xl w-[450px] mx-auto  p-10 rounded-xl text-center grid gap-4 justify-center items-center absolute popup2">
+    <div class="bg-white shadow-xl w-[300px] lg:w-[450px] mx-auto p-2 lg:p-10 rounded-xl text-center grid gap-4 justify-center items-center absolute popup2">
       <h3 class="text-2xl font-bold">Congrates!</h3>
       <img class="mx-auto" src="images/coin.png" alt="">
       <p class="font-semibold text-gray-600">You Have Donated for Humankind</p>
@@ -114,7 +120,7 @@
    </div>
    </div>
    <!-- blog section -->
-    <section id="blog-section" class="p-20 hidden">
+    <section id="blog-section" class="lg:p-20 p-2 hidden">
       <h3 class="text-2xl font-bold">Important FAQ</h3> <br>
       <div class="collapse collapse-arrow bg-base-200 ">
         <input type="radio" name="my-accordion-2" checked="checked" />
@@ -145,10 +151,6 @@
             </div>
       </div>
     </section>
-    <footer>
-
-    </footer>
-
     <script src="js/utility.js"></script>
     <script src="js/donate.js"></script>
     <script src="js/btn.js"></script>
